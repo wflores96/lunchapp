@@ -15,7 +15,7 @@ export class EventCardComponent implements OnInit {
 
   showModal(content, event:any) {
     let classList = event.target.classList;
-    if(classList.contains('btn')) {
+    if(classList.contains('btn') || classList.contains('badge')) {
       return;
     }
     this.modalService.open(content);
