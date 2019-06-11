@@ -15,8 +15,8 @@
 
 <body>
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
+<button type="button" class="btn btn-primary btn-lg" style="margin:10px;" data-toggle="modal" data-target="#exampleModal">
+        Create New Lunch
       </button>
       
       <!-- Modal -->
@@ -24,13 +24,26 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Create Lunch</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              ...
+                    <form>
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Where is your Lunch?</label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Location">
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Date</label>
+                              <input type="date" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="form-group">
+                                    <label for="exampleInputPassword1">Time</label>
+                                    <input type="time" class="form-control" id="exampleInputPassword2">
+                                  </div>
+                          </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
