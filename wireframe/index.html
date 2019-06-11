@@ -14,41 +14,34 @@
 </head>
 
 <body class="bg-dark">
+  
   <div class="container bg-light">
+    
+      <div class="d-flex justify-content-center">
+      
+        <h1 class="mx-auto">LunchFed</h1>
+      </div> 
     <div class="d-flex justify-content-end">
-        <button type="button" class="btn btn-primary btn-lg" style="margin:10px;" data-toggle="modal" data-target="#exampleModal">
-            Create New Lunch
-          </button>
+      <button type="button" class="btn btn-primary btn-lg" style="margin:10px;" data-toggle="modal"
+        data-target="#exampleModal">
+        Create New Lunch
+      </button>
     </div>
 
     <div class="today-events">
       <div class="alert alert-success">Today</div>
-      <div class="d-flex flex-wrap">
+      <div class="d-flex flex-wrap box-wrapper">
         <div class="card event-card">
           <div class="card-body d-flex justify-content-between flex-column">
             <h5 class="card-title">Graham is going to Tacos &amp; Tequila @ 12:00pm</h5>
-            <div class="button-details">
-              <span>5 going | </span><span>3 maybe</span>
-              <br>
-              <button class="btn btn-success">Going</button>
-              <button class="btn btn-info">Maybe</button>
-            </div>
-          </div>
-        </div>
-        <div class="card event-card">
-          <div class="card-body d-flex justify-content-between flex-column">
-            <h5 class="card-title">Graham is going to Tacos &amp; Tequila @ 12:00pm</h5>
-            <div class="button-details">
-               
-              <div class="d-flex justify-content-center">
-                <div class="going-box mx-1">
-                    <div>5 going</div>
-                    <button class="btn btn-outline-success" style="width:100%">Going</button>
-                </div>
-                <div class="maybe-box mx-1">
-                <div>3 maybe</div>
-                <button class="btn btn-outline-info" style="width:100%">Maybe</button>
-                </div>
+            <div class="button-details d-flex justify-content-between">
+              <div class="going-box mx-1">
+                <button class="btn btn-outline-success going-button" style="width:100%">Going <span
+                    class="badge">5</span></button>
+              </div>
+              <div class="maybe-box mx-1">
+                <button class="btn btn-outline-info maybe-button" style="width:100%">Maybe <span
+                    class="badge">3</span></button>
               </div>
             </div>
           </div>
@@ -57,11 +50,15 @@
         <div class="card event-card">
           <div class="card-body d-flex justify-content-between flex-column">
             <h5 class="card-title">Graham is going to Tacos &amp; Tequila @ 12:00pm</h5>
-            <div class="button-details">
-              <span>5 going | </span><span>3 maybe</span>
-              <br>
-              <button class="btn btn-success">Going</button>
-              <button class="btn btn-info">Maybe</button>
+            <div class="button-details d-flex justify-content-between">
+              <div class="going-box mx-1">
+                <button class="btn btn-outline-success going-button" style="width:100%">Going <span
+                    class="badge">5</span></button>
+              </div>
+              <div class="maybe-box mx-1">
+                <button class="btn btn-outline-info maybe-button" style="width:100%">Maybe <span
+                    class="badge">3</span></button>
+              </div>
             </div>
           </div>
         </div>
@@ -69,11 +66,15 @@
         <div class="card event-card">
           <div class="card-body d-flex justify-content-between flex-column">
             <h5 class="card-title">Graham is going to Tacos &amp; Tequila @ 12:00pm</h5>
-            <div class="button-details">
-              <span>5 going | </span><span>3 maybe</span>
-              <br>
-              <button class="btn btn-success">Going</button>
-              <button class="btn btn-info">Maybe</button>
+            <div class="button-details d-flex justify-content-between">
+              <div class="going-box mx-1">
+                <button class="btn btn-outline-success going-button" style="width:100%">Going <span
+                    class="badge">5</span></button>
+              </div>
+              <div class="maybe-box mx-1">
+                <button class="btn btn-outline-info maybe-button" style="width:100%">Maybe <span
+                    class="badge">3</span></button>
+              </div>
             </div>
           </div>
         </div>
@@ -81,15 +82,34 @@
         <div class="card event-card">
           <div class="card-body d-flex justify-content-between flex-column">
             <h5 class="card-title">Graham is going to Tacos &amp; Tequila @ 12:00pm</h5>
-            <div class="button-details">
-              <span>5 going | </span><span>3 maybe</span>
-              <br>
-              <button class="btn btn-success">Going</button>
-              <button class="btn btn-info">Maybe</button>
+            <div class="button-details d-flex justify-content-between">
+              <div class="going-box mx-1">
+                <button class="btn btn-outline-success going-button" style="width:100%">Going <span
+                    class="badge">5</span></button>
+              </div>
+              <div class="maybe-box mx-1">
+                <button class="btn btn-outline-info maybe-button" style="width:100%">Maybe <span
+                    class="badge">3</span></button>
+              </div>
             </div>
           </div>
         </div>
 
+        <div class="card event-card">
+          <div class="card-body d-flex justify-content-between flex-column">
+            <h5 class="card-title">Graham is going to Tacos &amp; Tequila @ 12:00pm</h5>
+            <div class="button-details d-flex justify-content-between">
+              <div class="going-box mx-1">
+                <button class="btn btn-outline-success going-button" style="width:100%">Going <span
+                    class="badge">5</span></button>
+              </div>
+              <div class="maybe-box mx-1">
+                <button class="btn btn-outline-info maybe-button" style="width:100%">Maybe <span
+                    class="badge">3</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
@@ -98,66 +118,79 @@
     <div class="tomorrow-events">
       <div class="alert alert-info">Tomorrow</div>
       <div class="d-flex flex-wrap">
+
         <div class="card event-card">
           <div class="card-body d-flex justify-content-between flex-column">
             <h5 class="card-title">Graham is going to Tacos &amp; Tequila @ 12:00pm</h5>
-            <div class="button-details">
-              <span>5 going | </span><span>3 maybe</span>
-              <br>
-              <button class="btn btn-success btn-lg">Going</button>
-              <button class="btn btn-info">Maybe</button>
+            <div class="button-details d-flex justify-content-between">
+              <div class="going-box mx-1">
+                <button class="btn btn-outline-success going-button" style="width:100%">Going <span
+                    class="badge">5</span></button>
+              </div>
+              <div class="maybe-box mx-1">
+                <button class="btn btn-outline-info maybe-button" style="width:100%">Maybe <span
+                    class="badge">3</span></button>
+              </div>
             </div>
           </div>
         </div>
+
         <div class="card event-card">
           <div class="card-body d-flex justify-content-between flex-column">
             <h5 class="card-title">Graham is going to Tacos &amp; Tequila @ 12:00pm</h5>
-            <div class="button-details">
-              <span>5 going | </span><span>3 maybe</span>
-              <br>
-              <button class="btn btn-success">Going</button>
-              <button class="btn btn-info">Maybe</button>
+            <div class="button-details d-flex justify-content-between">
+              <div class="going-box mx-1">
+                <button class="btn btn-outline-success going-button" style="width:100%">Going <span
+                    class="badge">5</span></button>
+              </div>
+              <div class="maybe-box mx-1">
+                <button class="btn btn-outline-info maybe-button" style="width:100%">Maybe <span
+                    class="badge">3</span></button>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
 
 
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Create Lunch</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-                  <form>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Where is your Lunch?</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Location">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputPassword1">Date</label>
-                            <input type="date" class="form-control" id="exampleInputPassword1">
-                          </div>
-                          <div class="form-group">
-                                  <label for="exampleInputPassword1">Time</label>
-                                  <input type="time" class="form-control" id="exampleInputPassword2">
-                                </div>
-                        </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create Lunch</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Where is your Lunch?</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Location">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Date</label>
+              <input type="date" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Time</label>
+              <input type="time" class="form-control" id="exampleInputPassword2">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
+  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -170,6 +203,20 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      $('.event-card .card-body').on('click', function (e) {
+        console.log(e.target.classList);
+        console.log(e.target.className);
+        if (e.target.classList.contains('going-button') || e.target.classList.contains('maybe-button')) {
+          return;
+        }
+        $('#exampleModal').modal();
+      })
+
+    });
+
+  </script>
 </body>
 
 </html>

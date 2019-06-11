@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EventCardComponent } from './components/event-card/event-card.component';
+import { EventGroupComponent } from './components/event-group/event-group.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EventCardComponent
+    EventCardComponent,
+    EventGroupComponent
   ],
   imports: [
     BrowserModule,
