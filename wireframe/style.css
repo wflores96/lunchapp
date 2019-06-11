@@ -4,3 +4,7 @@
   max-height: 200px !important;
   margin: 15px !important;
 }
+.going-box,
+.maybe-box {
+  width: 49%;
+}
