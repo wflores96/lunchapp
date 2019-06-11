@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  userName = '';
+
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -14,6 +16,8 @@ export class HomeComponent implements OnInit {
 
   redirectToLunches() {
     // save the username
+    console.log(`saving name ${this.userName}`)
+    localStorage.setItem('name',this.userName);
     this.router.navigate(['lunches']);
   }
 

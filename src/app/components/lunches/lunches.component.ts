@@ -12,6 +12,7 @@ export class LunchesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(localStorage.getItem('name'));
   }
 
 }
