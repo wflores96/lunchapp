@@ -1,7 +1,7 @@
 <ng-template #content let-modal>
   <div class="modal-header">
     <h5 class="modal-title" id="modal-basic-title">Create Lunch</h5>
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <button type="button" class="close" (click)="modal.close('X click')">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
