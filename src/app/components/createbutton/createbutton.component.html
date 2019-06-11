@@ -1,0 +1,31 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title" id="modal-basic-title">Create Lunch</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+      <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Where is your Lunch?</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Location">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Date</label>
+            <input type="date" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Time</label>
+            <input type="time" class="form-control" id="exampleInputPassword2">
+          </div>
+        </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
+    <button type="button" class="btn btn-primary" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
+
+<button type="button" class="btn btn-lg btn-primary" (click)="open(content)" style="margin:10px;">Create New Lunch</button>

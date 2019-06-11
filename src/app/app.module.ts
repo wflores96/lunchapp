@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EventCardComponent } from './components/event-card/event-card.component';
 import { EventGroupComponent } from './components/event-group/event-group.component';
-import { CreatebuttonComponent } from './createbutton/createbutton.component';
+import { CreatebuttonComponent } from './components/createbutton/createbutton.component';
 
 @NgModule({
   declarations: [
