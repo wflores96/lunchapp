@@ -1,7 +1,37 @@
-<div class="container bg-light d-flex justify-content-around align-items-center">
-    <img width="200px" src="http://www.mindwavesnews.com/wp-content/uploads/2017/06/sandwich-1024x578.jpg"/>
-    <div>
-        <input type="text" placeholder="what is your name?" [(ngModel)]='userName'>
-        <button type="button" class="btn btn-primary mx-1" (click)="redirectToLunches()">Log in</button>
+<div class="main">
+
+
+    <div class="container">
+        <div class="middle">
+            <h1>LunchFēd</h1>
+        </div>
+        <br>
+        <div class="middle">
+                
+            <div id="login">
+
+                <div class="signin-form">
+                    <fieldset class="clearfix">
+                        <p><span class="fa fa-user"></span><input type="text" Placeholder="What's your name?" [(ngModel)]='userName' required></p>
+                        <!-- JS because of IE support; better: placeholder="Username" -->
+                        <div (click)="redirectToLunches()">
+                            <span style="width:50%; text-align:right;  display: inline-block;"><input type="submit"
+                                    value="Sign In"></span>
+                        </div>
+
+                    </fieldset>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="clearfix"></div>
+
+            </div> <!-- end login -->
+            <div class="logo">
+                <img width="200" src="http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Sandwich-PNG-Transparent-Image-4.png"/>
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
     </div>
+
 </div>
