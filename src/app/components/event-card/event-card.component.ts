@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -8,9 +8,12 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 export class EventCardComponent implements OnInit {
 
+  @Input() data:any;
+
   constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
+    console.log(this.data);
   }
 
   showModal(content, event:any) {

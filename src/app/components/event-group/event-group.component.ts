@@ -7,10 +7,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class EventGroupComponent implements OnInit {
 
-  @Input() eventDay = '';
+  @Input() day: string;
+  @Input() lunches: [any];
   constructor() { }
 
   ngOnInit() {
+    this.lunches.sort((a,b) => {
+      if(a.time < b.time){
+        return -1;
+      }
+      if(a.time > b.time) {
+        return 1;
+      }
+      return 0;
+    })
   }
 
 }

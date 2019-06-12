@@ -7,5 +7,5 @@
       <app-createbutton></app-createbutton>
     </div>
   
-  <app-event-group *ngFor="let day of lunchDates" [eventDay]="day"></app-event-group>
+  <app-event-group *ngFor="let lunchDay of lunchDays" [day]="lunchDay.day" [lunches]="lunchDay.data"></app-event-group>
 </div>
