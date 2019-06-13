@@ -80,6 +80,11 @@ export class EventCardComponent implements OnInit {
     this.removeFromMaybe();
   }
 
+  clickDelete(context:any) {
+    this.dataService.deleteEvent(this.data.id);
+    context.close();
+  }
+
   private removeFromMaybe() {
     var index = this.data.maybe.indexOf(this.me);
     if(index != -1) {
@@ -108,9 +113,34 @@ export class EventCardComponent implements OnInit {
     }
   }
 
-  clickDelete(context:any) {
-    this.dataService.deleteEvent(this.data.id);
-    context.close();
+  get needsDateShown() {
+    let tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate()+1);
+    tomorrow.setHours(23);
+    tomorrow.setMinutes(59);
+    tomorrow.setSeconds(59);
+
+    return this.data.time > tomorrow;
+  }
+
+  private _days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  private _months = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"];
+
+  get dayText() {
+    return this._days[this.data.time.getDay()];
+  }
+
+  get monthText() {
+    return this._months[this.data.time.getMonth()];
+  }
+
+  get day() {
+    return this.data.time.getDate();
+  }
+
+  get year() {
+    return this.data.time.getFullYear();
   }
 
 }

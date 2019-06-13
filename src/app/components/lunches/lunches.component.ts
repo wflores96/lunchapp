@@ -19,7 +19,7 @@ export class LunchesComponent implements OnInit, OnDestroy {
       data: []
     },
     {
-      day: "Later",
+      day: "Future Lunches",
       data: []
     }
   ]

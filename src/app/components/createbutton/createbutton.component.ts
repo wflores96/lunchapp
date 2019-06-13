@@ -18,6 +18,10 @@ export class CreatebuttonComponent implements OnInit {
   constructor(private modalService: NgbModal, private dataService: DataService) {
   }
 
+  ngOnInit() {
+    this.date = new Date();
+  }
+
   set humanDate(e) {
     if (!e) {
       return;
@@ -29,10 +33,6 @@ export class CreatebuttonComponent implements OnInit {
 
   get humanDate() {
     return this.date.toISOString().substring(0, 10);
-  }
-
-  ngOnInit() {
-    this.date = new Date();
   }
 
   open(content) {
