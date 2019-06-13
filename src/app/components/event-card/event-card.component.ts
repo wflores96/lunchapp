@@ -21,6 +21,18 @@ export class EventCardComponent implements OnInit {
   maybe = false;
   private me = localStorage.getItem('name')
 
+  get getHost() {
+    if(this.data.host == this.me) {
+      return 'You';
+    }
+    else {
+      return this.data.host;
+    }
+  }
+
+  get areHosting() {
+    return this.getHost == 'You';
+  }
 
   constructor(private modalService: NgbModal) { }
 
