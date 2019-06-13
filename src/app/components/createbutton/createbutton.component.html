@@ -23,7 +23,8 @@
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
-    <button type="button" class="btn btn-primary" (click)="submitEvent(); modal.close('Save click')">Save</button>
+    <button type="button" class="btn btn-primary" (click)="submitEvent(modal);">Save</button>
+    <button type="button" class="btn btn-danger" (click)="debug()">Debug</button>
   </div>
 </ng-template>
 
