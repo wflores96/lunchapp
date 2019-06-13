@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
 import { events } from '../../data/data';
 @Component({
   selector: 'app-lunches',
@@ -7,7 +8,6 @@ import { events } from '../../data/data';
 })
 export class LunchesComponent implements OnInit {
 
-  lunches = events;
   lunchDays = [
     {
       day:"Today",
@@ -23,12 +23,16 @@ export class LunchesComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(public dataService: DataService) { }
 
   ngOnInit() {
+    
+    this.dataService.dataEmitter.subscribe((newData) => {
 
-    // assign today
-    this.lunchDays[0].data = this.lunches.filter(lunch => {
+      console.log(newData);
+
+      // assign today
+    this.lunchDays[0].data = newData.filter(lunch => {
       let today = new Date();
       
       return (lunch.time.getDate() == today.getDate()) 
@@ -39,7 +43,7 @@ export class LunchesComponent implements OnInit {
     })
 
     // assign tomorrow
-    this.lunchDays[1].data = this.lunches.filter(lunch => {
+    this.lunchDays[1].data = newData.filter(lunch => {
       let tomorrow = new Date();
       tomorrow.setDate(tomorrow.getDate()+1);
       return (lunch.time.getDate() == tomorrow.getDate())
@@ -50,12 +54,21 @@ export class LunchesComponent implements OnInit {
     })
 
     // assign later
-    this.lunchDays[2].data = this.lunches.filter(lunch => {
+    this.lunchDays[2].data = newData.filter(lunch => {
       let tomorrow = new Date();
       tomorrow.setDate(tomorrow.getDate()+1);
+      tomorrow.setHours(23);
+      tomorrow.setMinutes(59);
+      tomorrow.setSeconds(59);
 
       return lunch.time > tomorrow;
     })
+    })
+
+    events.forEach(e => {
+      this.dataService.emitHook(e);
+    })
+    
   }
 
 

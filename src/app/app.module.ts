@@ -11,6 +11,8 @@ import { CreatebuttonComponent } from './components/createbutton/createbutton.co
 import { HomeComponent } from './components/home/home.component';
 import { LunchesComponent } from './components/lunches/lunches.component';
 
+import { DataService } from './services/data.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,7 @@ import { LunchesComponent } from './components/lunches/lunches.component';
     NgbModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

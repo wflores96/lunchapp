@@ -1,7 +1,7 @@
 export let events = [
     {
         location:"Tacos and Tequila",
-        time: new Date("Jun 12, 2019 12:35:00 PM"),
+        time: new Date("Jun 13, 2019 12:35:00 PM"),
         host: "Graham",
         going: ["Will", "Zach", "Levi"],
         maybe: ["McCann", "Ben R."]
@@ -9,7 +9,7 @@ export let events = [
 
     {
         location:"Crush Craft",
-        time: new Date("Jun 12, 2019 12:00:00 PM"),
+        time: new Date("Jun 13, 2019 12:00:00 PM"),
         host: "Daniel",
         going: ["Graham", "Tanner", "Jacob"],
         maybe: ["Jennifer", "Alex", "Levi"]
@@ -17,7 +17,7 @@ export let events = [
 
     {
         location:"Chipotle",
-        time: new Date("Jun 13, 2019 12:30:00 PM"),
+        time: new Date("Jun 14, 2019 12:30:00 PM"),
         host: "Justin",
         going: ["Edmund", "Matt", "Chris"],
         maybe: ["Will", "Ben H."]
@@ -25,7 +25,7 @@ export let events = [
 
     {
         location: "Hopdoddy",
-        time: new Date("Jun 14, 2019 11:45:00 AM"),
+        time: new Date("Jun 15, 2019 11:45:00 AM"),
         host: "Matt",
         going: [],
         maybe: ["Alex", "Zach"]
