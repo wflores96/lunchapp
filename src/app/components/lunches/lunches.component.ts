@@ -29,8 +29,6 @@ export class LunchesComponent implements OnInit {
     
     this.dataService.dataEmitter.subscribe((newData) => {
 
-      console.log(newData);
-
       // assign today
     this.lunchDays[0].data = newData.filter(lunch => {
       let today = new Date();

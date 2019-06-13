@@ -6,26 +6,26 @@
     </button>
   </div>
   <div class="modal-body">
-      <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Where is your Lunch?</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-              placeholder="Location">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Date</label>
-            <input type="date" class="form-control" id="exampleInputPassword1">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Time</label>
-            <input type="time" class="form-control" id="exampleInputPassword2">
-          </div>
-        </form>
+    <form>
+      <div class="form-group">
+        <label for="location">Where is your lunch?</label>
+        <input type="email" class="form-control" placeholder="Location" [(ngModel)]="location" name="location">
+      </div>
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" class="form-control" [(ngModel)]="humanDate" name="date">
+      </div>
+      <div class="form-group">
+        <label for="time">Time</label>
+        <input type="time" class="form-control" [(ngModel)]="time" name="time">
+      </div>
+    </form>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
-    <button type="button" class="btn btn-primary" (click)="modal.close('Save click')">Save</button>
+    <button type="button" class="btn btn-primary" (click)="submitEvent(); modal.close('Save click')">Save</button>
   </div>
 </ng-template>
 
-<button type="button" class="btn btn-lg btn-primary" (click)="open(content)" style="margin:10px;">Create New Lunch</button>
+<button type="button" class="btn btn-lg btn-primary" (click)="open(content)" style="margin:10px;">Create New
+  Lunch</button>

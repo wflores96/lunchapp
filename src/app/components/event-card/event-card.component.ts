@@ -13,7 +13,6 @@ export class EventCardComponent implements OnInit {
   constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
-    console.log(this.data);
   }
 
   showModal(content, event:any) {

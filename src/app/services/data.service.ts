@@ -1,5 +1,4 @@
 import { Injectable, EventEmitter } from '@angular/core';
-import { events } from '../data/data';
 @Injectable({
   providedIn: 'root'
 })

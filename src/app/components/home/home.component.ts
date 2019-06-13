@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit {
 
   redirectToLunches() {
     // save the username
-    console.log(`saving name ${this.userName}`)
     localStorage.setItem('name',this.userName);
     this.router.navigate(['lunches']);
   }
