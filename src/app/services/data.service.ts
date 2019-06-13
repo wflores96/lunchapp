@@ -6,8 +6,8 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class DataService {
 
-  private baseData = [];
-  dataEmitter = new BehaviorSubject<any[]>(events);
+  private baseData = events;
+  dataEmitter = new BehaviorSubject<any[]>(this.baseData);
   
   constructor() {
   }

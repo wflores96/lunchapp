@@ -6,11 +6,13 @@
     </div>
     <div class="button-details d-flex justify-content-between">
       <div class="going-box mx-1">
-        <button class="btn going-button btn-lg" [ngClass]="{'btn-outline-success': !going,'btn-success':going}" style="width:100%" (click)="clickGoing()">Going
+        <button class="btn going-button btn-lg" [ngClass]="{'btn-outline-success': !going,'btn-success':going}"
+        style="width:100%" (click)="clickGoing()" [disabled]="areHosting">Going
           <span class="badge badge-success">{{data.going.length}}</span></button>
       </div>
       <div class="maybe-box mx-1">
-        <button class="btn maybe-button btn-lg" [ngClass]="{'btn-outline-info': !maybe,'btn-info':maybe}" style="width:100%" (click)="clickMaybe()">Maybe <span
+        <button class="btn maybe-button btn-lg" [ngClass]="{'btn-outline-info': !maybe,'btn-info':maybe}" 
+        style="width:100%" (click)="clickMaybe()" [disabled]="areHosting">Maybe <span
             class="badge badge-info">{{data.maybe.length}}</span></button>
       </div>
     </div>
