@@ -1,8 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { DataService } from 'src/app/services/data.service';
 
 
 interface IData {
+  id:string,
   location: string,
   time: Date,
   host: string,
@@ -34,7 +36,7 @@ export class EventCardComponent implements OnInit {
     return this.getHost == 'You';
   }
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, private dataService: DataService) { }
 
   ngOnInit() {
     if(this.data.going.indexOf(this.me) != -1) {
@@ -104,6 +106,11 @@ export class EventCardComponent implements OnInit {
     if(index == -1) {
       this.data.going.push(this.me);
     }
+  }
+
+  clickDelete(context:any) {
+    this.dataService.deleteEvent(this.data.id);
+    context.close();
   }
 
 }

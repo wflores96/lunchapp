@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DataService } from 'src/app/services/data.service';
-import { Time } from '@angular/common';
+import { UUID } from 'angular2-uuid';
 
 @Component({
   selector: 'app-createbutton',
@@ -52,6 +52,7 @@ export class CreatebuttonComponent implements OnInit {
     finalDate.setMinutes(timeSplit[1]);
 
     this.dataService.emitEvent({
+      id: UUID.UUID(),
       location: this.location,
       time: finalDate,
       host: localStorage.getItem('name'),

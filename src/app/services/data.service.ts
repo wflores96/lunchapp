@@ -16,4 +16,10 @@ export class DataService {
     this.baseData.push(newData);
     this.dataEmitter.next(this.baseData);
   }
+
+  deleteEvent(id:string) {
+    var index = this.baseData.indexOf(this.baseData.find(e => {return e.id === id}));
+    this.baseData.splice(index,1);
+    this.dataEmitter.next(this.baseData);
+  }
 }
