@@ -1,13 +1,13 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 
 interface IData {
   location: string,
   time: Date,
   host: string,
-  going: [string],
-  maybe: [string]
+  going: string[],
+  maybe: string[]
 }
 @Component({
   selector: 'app-event-card',

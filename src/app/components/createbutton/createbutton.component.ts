@@ -43,7 +43,7 @@ export class CreatebuttonComponent implements OnInit {
     finalDate.setHours(timeSplit[0]);
     finalDate.setMinutes(timeSplit[1]);
 
-    this.dataService.emitHook({
+    this.dataService.emitEvent({
       location: this.location,
       time: finalDate,
       host: localStorage.getItem('name'),

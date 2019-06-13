@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { events } from '../../data/data';
+import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-lunches',
   templateUrl: './lunches.component.html',
   styleUrls: ['./lunches.component.css']
 })
-export class LunchesComponent implements OnInit {
+export class LunchesComponent implements OnInit, OnDestroy {
 
   lunchDays = [
     {
@@ -23,11 +24,12 @@ export class LunchesComponent implements OnInit {
     }
   ]
 
+  eventSubscription: Subscription;
   constructor(public dataService: DataService) { }
 
   ngOnInit() {
 
-    this.dataService.dataEmitter.subscribe((newData) => {
+    this.eventSubscription = this.dataService.dataEmitter.subscribe((newData) => {
 
       // assign today
       this.lunchDays[0].data = newData.filter(lunch => {
@@ -81,20 +83,22 @@ export class LunchesComponent implements OnInit {
 
         return lunch.time > tomorrow;
       })
+      this.lunchDays[2].data.sort((a,b) => {
+        if(a.time < b.time){
+          return -1;
+        }
+        if(a.time > b.time) {
+          return 1;
+        }
+        return 0;
+      })
     })
-    this.lunchDays[2].data.sort((a,b) => {
-      if(a.time < b.time){
-        return -1;
-      }
-      if(a.time > b.time) {
-        return 1;
-      }
-      return 0;
-    })
+    
+  }
 
-    events.forEach(e => {
-      this.dataService.emitHook(e);
-    })
-
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    this.eventSubscription.unsubscribe();
   }
 }

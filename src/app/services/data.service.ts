@@ -1,17 +1,19 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
+import {events} from '../data/data';
+import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
   private baseData = [];
-  dataEmitter = new EventEmitter<any>();
+  dataEmitter = new BehaviorSubject<any[]>(events);
   
   constructor() {
   }
 
-  emitHook(newData: any) {
+  emitEvent(newData: any) {
     this.baseData.push(newData);
-    this.dataEmitter.emit(this.baseData);
+    this.dataEmitter.next(this.baseData);
   }
 }
