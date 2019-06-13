@@ -38,6 +38,8 @@ export class LunchesComponent implements OnInit {
           (lunch.time.getMonth() == today.getMonth())
           &&
           (lunch.time.getFullYear() == today.getFullYear())
+          &&
+          !(lunch.time < today)
       })
       this.lunchDays[0].data.sort((a,b) => {
         if(a.time < b.time){

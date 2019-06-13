@@ -17,14 +17,19 @@ interface IData {
 export class EventCardComponent implements OnInit {
 
   @Input() data: IData;
-  userGoing = false;
+  going = false;
+  maybe = false;
+  private me = localStorage.getItem('name')
+
 
   constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
-    var me = localStorage.getItem('name');
-    if(this.data.going.indexOf(me) != -1 || this.data.maybe.indexOf(me) != -1) {
-      this.userGoing = true;  
+    if(this.data.going.indexOf(this.me) != -1) {
+      this.clickGoing();
+    }
+    else if(this.data.maybe.indexOf(this.me) != -1) {
+      this.clickMaybe();
     }
   }
 
@@ -37,27 +42,55 @@ export class EventCardComponent implements OnInit {
   }
 
   clickMaybe() {
-    this.userGoing = true;
-    this.data.maybe.push(localStorage.getItem('name'));
+    this.maybe = !this.maybe;
+    this.going = false;
+
+    if(this.maybe) {
+      this.addToMaybe();
+    } else {
+      this.removeFromMaybe();
+    }
+    this.removeFromGoing();
   }
 
   clickGoing() {
-    this.userGoing = true;
-    this.data.going.push(localStorage.getItem('name'));
+    this.going = !this.going;
+    this.maybe = false;
+
+    if(this.going) {
+      this.addToGoing();
+    }
+    else {
+      this.removeFromGoing();
+    }
+    this.removeFromMaybe();
   }
 
-  clickUndo() {
-    var me = localStorage.getItem('name');
+  private removeFromMaybe() {
+    var index = this.data.maybe.indexOf(this.me);
+    if(index != -1) {
+      this.data.maybe.splice(index, 1);
+    }
+  }
 
-    this.userGoing = false;
-    var index = this.data.going.indexOf(me);
+  private removeFromGoing() {
+    var index = this.data.going.indexOf(this.me);
     if(index != -1) {
       this.data.going.splice(index, 1);
     }
+  }
 
-    index = this.data.maybe.indexOf(me);
-    if(index != -1) {
-      this.data.maybe.splice(index, 1);
+  private addToMaybe() {
+    var index = this.data.maybe.indexOf(this.me);
+    if(index == -1) {
+      this.data.maybe.push(this.me);
+    }
+  }
+
+  private addToGoing() {
+    var index = this.data.going.indexOf(this.me);
+    if(index == -1) {
+      this.data.going.push(this.me);
     }
   }
 
