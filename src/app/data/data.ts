@@ -16,6 +16,22 @@ export let events = [
     },
 
     {
+        location:"Whole Foods",
+        time: new Date("Jun 13, 2019 12:30:00 PM"),
+        host: "Justin",
+        going: ["Justin", "Edmund", "Matt", "Chris"],
+        maybe: ["Will", "Ben H."]
+    },
+
+    {
+        location:"Cremona",
+        time: new Date("Jun 13, 2019 11:30:00 AM"),
+        host: "Jennifer",
+        going: ["Justin", "Edmund", "Matt", "Chris"],
+        maybe: ["Will", "Ben H."]
+    },    
+
+    {
         location:"Chipotle",
         time: new Date("Jun 14, 2019 12:30:00 PM"),
         host: "Justin",
