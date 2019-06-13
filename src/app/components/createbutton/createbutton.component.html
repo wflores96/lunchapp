@@ -13,7 +13,8 @@
       </div>
       <div class="form-group">
         <label for="date">Date</label>
-        <input type="date" class="form-control" [(ngModel)]="humanDate" name="date">
+        <input type="date" class="form-control" [(ngModel)]="humanDate" name="date"
+        [min]="dateBeginLimit" [max]="dateEndLimit">
       </div>
       <div class="form-group">
         <label for="time">Time</label>
@@ -24,7 +25,7 @@
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
     <button type="button" class="btn btn-primary" (click)="submitEvent(modal);">Save</button>
-    <button type="button" class="btn btn-danger" (click)="debug()">Debug</button>
+    <!-- <button type="button" class="btn btn-danger" (click)="debug()">Debug</button> -->
   </div>
 </ng-template>
 

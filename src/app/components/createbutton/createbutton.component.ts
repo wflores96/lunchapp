@@ -62,6 +62,22 @@ export class CreatebuttonComponent implements OnInit {
     context.close();
   }
 
+  get dateBeginLimit() {
+    let limit = new Date();
+    let _limit = `${limit.getFullYear()}-${limit.getMonth() < 9 ? '0':''}${limit.getMonth()+1}-${limit.getDate()}`;
+    return _limit;
+  }
+
+  get dateEndLimit() {
+    let limit = new Date();
+    limit.setDate(limit.getDate()+4);
+    limit.setHours(23);
+    limit.setMinutes(59);
+    limit.setSeconds(59);
+    let _limit = `${limit.getFullYear()}-${limit.getMonth() < 9 ? '0':''}${limit.getMonth()+1}-${limit.getDate()}`;
+    return _limit;
+  }
+
   debug() {
 
     console.log(this.humanDate);
