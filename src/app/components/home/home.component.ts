@@ -16,8 +16,12 @@ export class HomeComponent implements OnInit {
 
   redirectToLunches() {
     // save the username
-    localStorage.setItem('name',this.userName);
-    this.router.navigate(['lunches']);
+    if (this.userName === "") {
+      alert ("Please enter a user name!")
+    } else {
+      localStorage.setItem('name',this.userName);
+      this.router.navigate(['lunches']);
+    }
   }
 
 }

@@ -6,7 +6,7 @@
     </button>
   </div>
   <div class="modal-body">
-    <form>
+    <form (keyup.enter)="submitEvent(); modal.close()">
       <div class="form-group">
         <label for="location">Where is your lunch?</label>
         <input type="email" class="form-control" placeholder="Location" [(ngModel)]="location" name="location">

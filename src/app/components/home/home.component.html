@@ -12,7 +12,7 @@
 
                 <div class="signin-form">
                     <fieldset class="clearfix">
-                        <p><span class="fa fa-user"></span><input type="text" Placeholder="What's your name?" [(ngModel)]='userName' required></p>
+                        <p><span class="fa fa-user"></span><input type="text" Placeholder="What's your name?" [(ngModel)]='userName' (keyup.enter)="redirectToLunches()" required></p>
                         <!-- JS because of IE support; better: placeholder="Username" -->
                         <div (click)="redirectToLunches()">
                             <span style="width:50%; text-align:right;  display: inline-block;"><input type="submit"
