@@ -22,7 +22,7 @@
 
 <ng-template #content let-modal>
 
-  <div class="modal-body">
+  <div class="modal-body our-modal">
 
     <div class="card-body d-flex justify-content-between flex-column">
       <div>
@@ -57,6 +57,17 @@
       
       
       
+    </div>
+    <div class="card-footer">
+      <ul class="list-group">
+        <li class="comment-item list-group-item d-flex justify-content-start mb-1" *ngFor="let comment of data.comments">
+          <div class="comment-name-wrapper d-flex flex-column justify-content-center align-items-center bg-light">
+            <div class="font-weight-bold text-muted comment-name">{{comment.name}}</div>
+          </div>
+          <div class="comment-content"> {{comment.content}}</div>
+        </li>
+      </ul>
+      <input class="mt-1 comment-content" [(ngModel)]="newComment" style="width: 100%" placeholder="your comment here" (keyup.enter)="submitComment()">
     </div>
 
   </div>

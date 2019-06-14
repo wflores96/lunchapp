@@ -9,3 +9,28 @@
 .maybe-box {
   width: 49%;
 }
+
+.our-modal {
+  padding: 0px !important;
+}
+
+.comment-item {
+  padding-left: 0% !important;
+  padding-top: 0% !important;
+  padding-bottom: 0% !important;
+  /* height: 500% !important; */
+}
+
+.comment-name-wrapper {
+  padding: 0 10px;
+  border-right: 0.1px solid gray;
+  /* border-top: 0.1px solid gray;
+  border-bottom: 0.1px solid gray; */
+  border-width: thin;
+  border-radius: 3px;
+}
+
+.comment-content {
+  padding: 12px 15px;
+  overflow: auto;
+}

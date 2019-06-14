@@ -9,7 +9,8 @@ interface IData {
   time: Date,
   host: string,
   going: string[],
-  maybe: string[]
+  maybe: string[],
+  comments: any[]
 }
 @Component({
   selector: 'app-event-card',
@@ -21,6 +22,7 @@ export class EventCardComponent implements OnInit {
   @Input() data: IData;
   going = false;
   maybe = false;
+  newComment: string;
   private me = localStorage.getItem('name')
 
   get getHost() {
@@ -52,7 +54,9 @@ export class EventCardComponent implements OnInit {
     if (classList.contains('btn') || classList.contains('badge')) {
       return;
     }
-    this.modalService.open(content);
+    this.modalService.open(content).result.finally(() => {
+      this.newComment = "";
+    });
   }
 
   clickMaybe() {
@@ -83,6 +87,14 @@ export class EventCardComponent implements OnInit {
   clickDelete(context:any) {
     this.dataService.deleteEvent(this.data.id);
     context.close();
+  }
+
+  submitComment() {
+    this.data.comments.push({
+      name: this.me,
+      content: this.newComment
+    })
+    this.newComment = "";
   }
 
   private removeFromMaybe() {
@@ -142,5 +154,7 @@ export class EventCardComponent implements OnInit {
   get year() {
     return this.data.time.getFullYear();
   }
+
+
 
 }

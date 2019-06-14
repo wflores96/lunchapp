@@ -14,7 +14,13 @@ export let events = [
         time: new Date("Jun 14, 2019 12:00:00 PM"),
         host: "Daniel",
         going: ["Daniel", "Tanner", "Jacob"],
-        maybe: ["Jennifer", "Alex", "Levi"]
+        maybe: ["Jennifer", "Alex", "Levi"],
+        comments: [
+            {
+                name: 'Will',
+                content: 'cant wait!'
+            }
+        ]
     },
 
     {
