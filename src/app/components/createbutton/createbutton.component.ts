@@ -53,6 +53,10 @@ export class CreatebuttonComponent implements OnInit {
     finalDate.setHours(timeSplit[0]);
     finalDate.setMinutes(timeSplit[1]);
 
+    if(this.location.length > 40) {
+      this.location = this.location.slice(0,40);
+    }
+
     this.dataService.emitEvent({
       id: UUID.UUID(),
       location: this.location,
