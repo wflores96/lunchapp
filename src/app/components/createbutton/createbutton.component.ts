@@ -36,7 +36,9 @@ export class CreatebuttonComponent implements OnInit {
   }
 
   open(content) {
-    this.modalService.open(content);
+    this.modalService.open(content).result.finally(() => {
+      this.closeModal(null);
+    })
   }
 
   submitEvent(context: any) {
@@ -65,9 +67,11 @@ export class CreatebuttonComponent implements OnInit {
   }
 
   closeModal(context: any) {
+    if(context) {
+      context.close();
+    }
     this.location = null;
     this.time = null;
-    context.close();
   }
 
   get dateBeginLimit() {
