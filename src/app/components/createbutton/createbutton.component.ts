@@ -59,6 +59,14 @@ export class CreatebuttonComponent implements OnInit {
       going: [localStorage.getItem('name')],
       maybe: []
     })
+    this.location = null;
+    this.time = null;
+    context.close();
+  }
+
+  closeModal(context: any) {
+    this.location = null;
+    this.time = null;
     context.close();
   }
 
