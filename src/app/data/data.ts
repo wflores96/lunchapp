@@ -5,7 +5,8 @@ export let events = [
         time: new Date("Jun 14, 2019 12:35:00 PM"),
         host: "Graham",
         going: ["Graham", "Daniel", "Zach", "Levi"],
-        maybe: ["McCann", "Ben R."]
+        maybe: ["McCann", "Ben R."],
+        comments: []
     },
 
     {
@@ -29,7 +30,8 @@ export let events = [
         time: new Date("Jun 14, 2019 12:30:00 PM"),
         host: "Justin",
         going: ["Justin", "Edmund", "Matt", "Chris"],
-        maybe: ["Will", "Ben H."]
+        maybe: ["Will", "Ben H."],
+        comments: []
     },
 
     {
@@ -38,7 +40,8 @@ export let events = [
         time: new Date("Jun 14, 2019 11:30:00 AM"),
         host: "Jennifer",
         going: ["Justin", "Edmund", "Matt", "Chris"],
-        maybe: ["Will", "Ben H."]
+        maybe: ["Will", "Ben H."],
+        comments: []
     },    
 
     {
@@ -47,7 +50,8 @@ export let events = [
         time: new Date("Jun 15, 2019 12:30:00 PM"),
         host: "Justin",
         going: ["Justin", "Edmund", "Matt", "Chris"],
-        maybe: ["Will", "Ben H."]
+        maybe: ["Will", "Ben H."],
+        comments: []
     },
 
     {
@@ -56,6 +60,7 @@ export let events = [
         time: new Date("Jun 16, 2019 11:45:00 AM"),
         host: "Matt",
         going: ["Matt"],
-        maybe: ["Alex", "Zach"]
+        maybe: ["Alex", "Zach"],
+        comments: []
     }
 ]
