@@ -4,7 +4,7 @@ export let events = [
         location:"Tacos and Tequila",
         time: new Date("Jun 14, 2019 12:35:00 PM"),
         host: "Graham",
-        going: ["Graham", "Will", "Zach", "Levi"],
+        going: ["Graham", "Daniel", "Zach", "Levi"],
         maybe: ["McCann", "Ben R."]
     },
 

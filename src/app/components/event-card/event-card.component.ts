@@ -156,5 +156,4 @@ export class EventCardComponent implements OnInit {
   }
 
 
-
 }
